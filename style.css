@@ -43,7 +43,17 @@
 .header>.user{
     grid-area: user;
     border: black solid;
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    align-items: center;
 }
+.user img{
+    width: 70px;
+    height: 50px;
+    border-radius: 50%;
+}
+
 .header>.greeting{
     grid-area: greeting;
     border: wheat solid;
