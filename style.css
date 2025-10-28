@@ -69,6 +69,23 @@
 .header>.action{
     grid-area: action;
     border: green solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.action a{
+  background-color: #1992d4;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 8px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+
 }
 .sidebar{
     border: blue dotted;
