@@ -1,0 +1,25 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "slidebar header header"
+    "slidebar main-content main-content"
+    "slidebar main-content main-content" ;
+
+}
+.header{
+    border: red dotted;
+    grid-area: header;
+    background-color: lightcoral;
+}
+.slidebar{
+    border: blue dotted;
+    grid-area: slidebar;
+    background-color: lightblue;
+}
+.main-content{
+    border: green dotted;
+    grid-area: main-content;
+    background-color: lightcyan;
+}
