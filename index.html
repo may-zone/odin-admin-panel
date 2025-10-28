@@ -5,23 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <div class="slidebar">
-            <div class="dashlogo"> Dashboard</div>
+        <div class="sidebar">
+            <div  id="dashboard"     class="mdi mdi-view-dashboard"> Dashboard</div>
             <ul class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Profile</a></li>
-                <li><a href="">Message</a></li>
-                <li><a href="">History</a></li>
-                <li><a href="">Tasks</a></li>
-                <li><a href="">Communities</a></li>
+                <li><a class="mdi mdi-home-variant" href=""> Home</a></li>
+                <li><a class="mdi mdi-account-circle"  href=""> Profile</a></li>
+                <li><a class="mdi mdi-chat"  href=""> Messages</a></li>
+                <li><a class="mdi mdi-history" href=""> History</a></li>
+                <li><a class="mdi mdi-calendar-check" href=""> Tasks</a></li>
+                <li><a class="mdi mdi-account-group-outline" href=""> Communities</a></li>
             </ul>
-            <ul>
-                <li><a href="">Settings</a></li>
-                <li><a href="">Support</a></li>
-                <li><a href="">privacy</a></li>
+            <ul class="bottom-menu">
+                <li><a class="mdi mdi-cogs"> Settings</a></li>
+                <li><a class="mdi mdi-face-agent" href=""> Support</a></li>
+                <li><a class="mdi mdi-shield-account-outline" href=""> privacy</a></li>
             </ul>
         </div>
         <div class="header"></div>

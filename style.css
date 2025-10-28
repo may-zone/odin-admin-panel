@@ -3,10 +3,10 @@
     height: 100vh;
     display: grid;
     grid-template-areas:
-    "slidebar header header"
-    "slidebar main-content main-content"
-    "slidebar main-content main-content" ;
-    grid-template-columns: 1fr 5fr;
+    "sidebar header header"
+    "sidebar main-content main-content"
+    "sidebar main-content main-content" ;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: 2fr 6fr;
 
 }
@@ -15,13 +15,45 @@
     grid-area: header;
     background-color: lightcoral;
 }
-.slidebar{
+.sidebar{
     border: blue dotted;
-    grid-area: slidebar;
-    background-color: lightblue;
+    grid-area: sidebar;
+    background-color: #1992d4;
+    display: grid;
+    grid-template-rows:1fr 5fr 2fr ;
+    color: white;
+    padding-left: 15px;
+    
+
+}
+.sidebar>.menu{
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+    font-size: 26px;
+}
+.sidebar>.bottom-menu{
+    display: flex;
+    row-gap: 25px;
+    flex-direction: column;
+    font-size: 20px;
 }
 .main-content{
     border: green dotted;
     grid-area: main-content;
     background-color: lightcyan;
+}
+
+.sidebar > ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0 ;
+    color: white;
+}
+.sidebar a {
+  text-decoration: none; 
+  color: #ffffff;
+}
+#dashboard{
+    font-size: 34px;
 }
