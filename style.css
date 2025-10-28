@@ -6,6 +6,8 @@
     "slidebar header header"
     "slidebar main-content main-content"
     "slidebar main-content main-content" ;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 2fr 6fr;
 
 }
 .header{
