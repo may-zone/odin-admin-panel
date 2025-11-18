@@ -38,6 +38,7 @@ body{
     background-color: #f1f3f5;
     border-radius: 999px;
     padding: 10px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 #searchside{
     background-color: transparent;
@@ -63,6 +64,22 @@ body{
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.header .user img{
+    cursor: pointer;
+}
+.header .user img:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+.header .user .mdi{
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+.header .user .mdi:hover{
+    color: #f4c430;
+    transform: translateY(-2px);
 }
 
 .header>.greeting{
@@ -95,7 +112,8 @@ body{
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 16px rgba(25, 146, 212, 0.3);
 }
 .sidebar{
     grid-area: sidebar;
@@ -105,7 +123,7 @@ body{
     color: white;
     padding: 30px 20px;
     row-gap: 20px;
-    box-shadow: inset -1px 0 0 rgba(255,255,255,0.1);
+    box-shadow: inset -1px 0 0 rgba(255,255,255,0.15), 4px 0 18px rgba(0,0,0,0.08);
 }
 .sidebar>.menu{
     display: flex;
@@ -191,7 +209,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
     max-height: 320px;
     padding: 15px;
     overflow: hidden;
@@ -223,7 +241,7 @@ body{
     width: 100%;
     background-color:white;
     border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
     flex-direction: column;
     display: flex;
     row-gap: 10px;
@@ -267,7 +285,7 @@ body{
     border-left:6px solid #f4b400;
     border-radius:12px;
     padding:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
     min-width:0;
     min-height: 200px;
     gap: 10px;
