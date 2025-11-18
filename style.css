@@ -139,6 +139,7 @@ body{
     padding: 10px 14px;
     border-radius: 12px;
     transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
 }
 .sidebar a:hover{
     background-color: rgba(255, 255, 255, 0.2);
