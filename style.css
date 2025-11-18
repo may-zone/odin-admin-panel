@@ -290,6 +290,16 @@ body{
     min-height: 200px;
     gap: 10px;
 }
+.projects .card span{
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+.projects .card span.mdi-star-plus-outline:hover{
+    color: #f4b400;
+}
+.projects .card span.mdi-source-branch:hover{
+    color: #2cb67d;
+}
 .projects > .card h3{
     grid-column: 1 / -1;
     margin: 0;
