@@ -211,6 +211,9 @@ body{
     margin-top: 10px;
     font-size: var(--font-xxl);
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 .sidebar .menu a{
     font-size: var(--font-lg);
