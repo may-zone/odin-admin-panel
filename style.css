@@ -97,10 +97,6 @@ body{
     font-size: 16px;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
-.action a:hover{
-    background-color: #0f6d9d;
-    transform: translateY(-1px);
-}
 .sidebar{
     grid-area: sidebar;
     background-color: #1992d4;
@@ -144,6 +140,29 @@ body{
 .sidebar a:hover{
     background-color: rgba(255, 255, 255, 0.2);
     color: #fff;
+}
+/* Shared hover feedback for interactive elements */
+.action a,
+.projects > .card,
+.trending > .user,
+.announcements > div,
+.projects .card .mdi {
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+.action a:hover{
+    background-color: #0f6d9d;
+    transform: translateY(-1px);
+}
+.projects > .card:hover,
+.trending > .user:hover,
+.announcements > div:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+.projects .card .mdi:hover{
+    color: #1992d4;
+    transform: translateY(-1px);
 }
 #dashboard{
     margin-top: 10px;
