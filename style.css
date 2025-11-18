@@ -1,3 +1,12 @@
+:root{
+    font-size: 16px;
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.25rem;
+    --font-xl: 1.5rem;
+    --font-xxl: 2rem;
+}
 *{
     box-sizing: border-box;
 }
@@ -6,6 +15,8 @@ body{
     font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f5f6f8;
     color: #222;
+    font-size: var(--font-base);
+    line-height: 1.5;
 }
 .container{
     min-height: 100vh;
@@ -81,6 +92,10 @@ body{
     color: #f4c430;
     transform: translateY(-2px);
 }
+.header .user h3{
+    margin: 0;
+    font-size: var(--font-base);
+}
 
 .header>.greeting{
     grid-area: greeting;
@@ -93,6 +108,15 @@ body{
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+.greeting .text p{
+    margin: 0;
+    font-size: var(--font-sm);
+    color: #6b7280;
+}
+.greeting .text h2{
+    margin: 4px 0 0;
+    font-size: var(--font-xl);
 }
 .header>.action{
     grid-area: action;
@@ -111,7 +135,7 @@ body{
     padding: 10px 24px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: var(--font-sm);
     transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.15s ease;
     box-shadow: 0 6px 16px rgba(25, 146, 212, 0.3);
 }
@@ -129,13 +153,14 @@ body{
     display: flex;
     row-gap: 30px;
     flex-direction: column;
-    font-size: 20px;
+    font-size: var(--font-lg);
 }
 .sidebar>.bottom-menu{
     display: flex;
     row-gap: 25px;
     flex-direction: column;
-    font-size: 16px;
+    font-size: var(--font-base);
+    opacity: 0.95;
 }
 
 .sidebar > ul{
@@ -184,8 +209,23 @@ body{
 }
 #dashboard{
     margin-top: 10px;
-    font-size: 34px;
+    font-size: var(--font-xxl);
     font-weight: 700;
+}
+.sidebar .menu a{
+    font-size: var(--font-lg);
+}
+.sidebar .bottom-menu a{
+    font-size: var(--font-base);
+}
+.sidebar .bottom-menu a{
+    opacity: 0.95;
+}
+.sidebar .bottom-menu a span{
+    font-size: inherit;
+}
+.sidebar .menu a span{
+    font-size: inherit;
 }
 
 .main-content{
@@ -200,6 +240,10 @@ body{
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.right-rail > h3{
+    margin: 0;
+    font-size: var(--font-lg);
 }
 .announcements{
     width:100%;
@@ -221,18 +265,18 @@ body{
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   width: 90%;
-
+  font-size: var(--font-sm);
 }
 .announcements > div:last-child {
   border-bottom: none; 
 }
 .announcements h3 {
-  font-size: 15px;
+  font-size: var(--font-base);
   margin-bottom: 5px;
 }
 
 .announcements p {
-  font-size: 13px;
+  font-size: var(--font-sm);
   color: #555;
   line-height: 1.5;
   margin: 0;
@@ -259,6 +303,16 @@ body{
   display: flex;
   align-items: center;
   gap: 10px;
+  font-size: var(--font-sm);
+}
+.trending > .user h4{
+    margin: 0;
+    font-size: var(--font-base);
+}
+.trending > .user p{
+    margin: 0;
+    color: #6b7280;
+    font-size: var(--font-sm);
 }
 /* .announcements{ max-height: 280px; overflow:auto; }
 .trending{ max-height: 220px; overflow:auto; } */
@@ -272,7 +326,7 @@ body{
     align-content: start;
 }
 .projects > h3{
-    font-size: 22px;
+    font-size: var(--font-xl);
     font-weight: 700;
     margin: 0 0 10px;
     grid-column: 1 / -1;
@@ -291,11 +345,20 @@ body{
     gap: 10px;
 }
 .projects .card span{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: color 0.15s ease, transform 0.15s ease;
 }
+.projects .card span:hover{
+    transform: translateY(-1px);
+}
 .projects .card span.mdi-star-plus-outline:hover{
     color: #f4b400;
+}
+.projects .card span.mdi-eye-plus-outline:hover{
+    color: #1992d4;
 }
 .projects .card span.mdi-source-branch:hover{
     color: #2cb67d;
@@ -303,13 +366,14 @@ body{
 .projects > .card h3{
     grid-column: 1 / -1;
     margin: 0;
-    font-size: 20px;
+    font-size: var(--font-lg);
 }
 .projects > .card p{
     grid-column: 1 / -1;
     margin: 0;
     color: #545454;
-    line-height: 1.4;
+    font-size: var(--font-sm);
+    line-height: 1.6;
 }
 .card .mdi{
     font-size:18px;
